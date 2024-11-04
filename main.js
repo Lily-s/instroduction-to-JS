@@ -65,7 +65,12 @@ function ageIn() {
 function convertCurrency() {
   let usdAmount = parseFloat(document.getElementById("usd").value);
   let eurAmount = usdAmount * 0.92;
-  console.log(eurAmount);
-  document.getElementById("result").innerHTML =
-    "result is " + eurAmount + " EUR";
+  eurAmount = eurAmount.toFixed(2);
+
+  if (isNaN(eurAmount)) {
+    document.getElementById("result").innerHTML = "I HATE JS :)";
+  } else {
+    document.getElementById("result").innerHTML =
+      "result is " + eurAmount + " EUR";
+  }
 }

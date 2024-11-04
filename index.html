@@ -15,8 +15,7 @@
   <div class="container">
     <div>
       <label for="pin">Enter value in USD</label>
-      <input type="number" id="usd" value="100" />
-      <button onclick="convertCurrency()">Convert to EUR</button>
+      <input onkeyup="convertCurrency()" type="number" id="usd" value="100" />
       <p id="result">92 EUR</p>
     </div>
   </div>
