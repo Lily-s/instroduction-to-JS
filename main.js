@@ -61,3 +61,11 @@ function ageIn() {
   console.log("in 2029 you'll be %c" + (2029 - year), "color: blue");
   console.log("in 2050 you'll be %c" + (2050 - year), "color: green");
 }
+
+function convertCurrency() {
+  let usdAmount = parseFloat(document.getElementById("usd").value);
+  let eurAmount = usdAmount * 0.92;
+  console.log(eurAmount);
+  document.getElementById("result").innerHTML =
+    "result is " + eurAmount + " EUR";
+}

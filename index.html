@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="main.css" />
     <script src="main.js"></script>
   </head>
   <body>
@@ -11,4 +12,12 @@
     <button onclick="nameAgeCountry()">nameAgeCountry</button>
     <button onclick="ageIn()">2025, 2029, 2050</button>
   </body>
+  <div class="container">
+    <div>
+      <label for="pin">Enter value in USD</label>
+      <input type="number" id="usd" value="100" />
+      <button onclick="convertCurrency()">Convert to EUR</button>
+      <p id="result">92 EUR</p>
+    </div>
+  </div>
 </html>
