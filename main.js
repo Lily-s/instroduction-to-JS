@@ -68,7 +68,8 @@ function convertCurrency() {
   eurAmount = eurAmount.toFixed(2);
 
   if (isNaN(eurAmount)) {
-    document.getElementById("result").innerHTML = "I HATE JS :)";
+    document.getElementById("result").innerHTML =
+      "Please enter the valid number";
   } else {
     document.getElementById("result").innerHTML =
       "result is " + eurAmount + " EUR";
