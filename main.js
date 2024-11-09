@@ -74,3 +74,20 @@ function convertCurrency() {
       "result is " + eurAmount + " EUR";
   }
 }
+
+function calcFileCount(flashDriveMemoryGB) {
+  if (isNaN(flashDriveMemoryGB) || flashDriveMemoryGB < 0.8) {
+    return 0;
+  }
+
+  const fileSizeMB = 820;
+  const flashDriveMemoryMB = flashDriveMemoryGB * 1024;
+  const howManyFiles = Math.floor(flashDriveMemoryMB / fileSizeMB);
+  return howManyFiles;
+}
+
+function driveMemory() {
+  let gb = parseFloat(document.getElementById("gb").value);
+  let count = calcFileCount(gb);
+  document.getElementById("resultMB").innerHTML = "result is " + count;
+}

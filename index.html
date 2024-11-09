@@ -11,12 +11,18 @@
     <button onclick="speed()">speed</button>
     <button onclick="nameAgeCountry()">nameAgeCountry</button>
     <button onclick="ageIn()">2025, 2029, 2050</button>
-  </body>
-  <div class="container">
-    <div>
-      <label for="pin">Enter value in USD</label>
-      <input onkeyup="convertCurrency()" type="number" id="usd" value="100" />
-      <p id="result">92 EUR</p>
+
+    <div class="container">
+      <div>
+        <label for="pin">Enter value in USD</label>
+        <input onkeyup="convertCurrency()" type="number" id="usd" value="100" />
+        <p id="result">92 EUR</p>
+      </div>
     </div>
-  </div>
+    <div class="container" style="border-radius: 100px 100px 100px 100px">
+      <label for="pin">Memory in GB</label>
+      <input onkeyup="driveMemory()" type="number" id="gb" value="100" />
+      <p id="resultMB">124</p>
+    </div>
+  </body>
 </html>
