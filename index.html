@@ -14,15 +14,40 @@
 
     <div class="container">
       <div>
-        <label for="pin">Enter value in USD</label>
+        <label for="usd">Enter value in USD</label>
         <input onkeyup="convertCurrency()" type="number" id="usd" value="100" />
         <p id="result">92 EUR</p>
       </div>
     </div>
     <div class="container" style="border-radius: 100px 100px 100px 100px">
-      <label for="pin">Memory in GB</label>
+      <label for="gb">Memory in GB</label>
       <input onkeyup="driveMemory()" type="number" id="gb" value="100" />
       <p id="resultMB">124</p>
+    </div>
+
+    <div class="container" style="border-radius: 100px 100px 100px 100px" ;>
+      <div class="inputGroup">
+        <label for="wallet">Money I have</label>
+        <input
+          onkeyup="MountChocolate()"
+          onchange="MountChocolate()"
+          type="number"
+          id="wallet"
+          value="100"
+        />
+      </div>
+      <div class="inputGroup">
+        <label for="price">Price of one chocolate bar</label>
+        <input
+          onkeyup="MountChocolate()"
+          onchange="MountChocolate()"
+          type="number"
+          id="price"
+          value="0"
+        />
+      </div>
+      <p id="resultMountChocolate">You can buy</p>
+      <p id="resultMoneyLeft">Monety I still have</p>
     </div>
   </body>
 </html>

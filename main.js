@@ -92,3 +92,31 @@ function driveMemory() {
   let count = calcFileCount(gb);
   document.getElementById("resultMB").innerHTML = "result is " + count;
 }
+
+function output(where, what) {
+  document.getElementById(where).innerHTML = what;
+}
+
+function MountChocolate() {
+  let moneyIhave = parseFloat(document.getElementById("wallet").value);
+  let chocolatePrice = parseFloat(document.getElementById("price").value);
+  if (
+    isNaN(moneyIhave) ||
+    isNaN(chocolatePrice) ||
+    moneyIhave <= 0 ||
+    chocolatePrice <= 0
+  ) {
+    output("resultMountChocolate", "Enter the valid value");
+    output("resultMoneyLeft", "");
+    return;
+  }
+
+  let resultMountChocolate = Math.floor(moneyIhave / chocolatePrice);
+  let resultMoneyLeft = moneyIhave % chocolatePrice;
+  output(
+    "resultMountChocolate",
+    "You can buy " + resultMountChocolate + " chocolates"
+  );
+
+  output("resultMoneyLeft", "Money I still have " + resultMoneyLeft + " eur  ");
+}
