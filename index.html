@@ -19,13 +19,13 @@
         <p id="result">92 EUR</p>
       </div>
     </div>
-    <div class="container" style="border-radius: 100px 100px 100px 100px">
+    <div class="container">
       <label for="gb">Memory in GB</label>
       <input onkeyup="driveMemory()" type="number" id="gb" value="100" />
       <p id="resultMB">124</p>
     </div>
 
-    <div class="container" style="border-radius: 100px 100px 100px 100px" ;>
+    <div class="container">
       <div class="inputGroup">
         <label for="wallet">Money I have</label>
         <input
@@ -48,6 +48,41 @@
       </div>
       <p id="resultMountChocolate">You can buy</p>
       <p id="resultMoneyLeft">Monety I still have</p>
+    </div>
+    <div class="container">
+      <label for="lang">Choose a language:</label>
+      <select name="lang" id="lang" onchange="greeting()">
+        <option value="en">Enlish</option>
+        <option value="cs">Čeština</option>
+        <option value="ua">Українська</option>
+      </select>
+      <label for="greetingName" id="greetingNameLabel">Enter your name</label>
+      <input
+        onkeyup="greeting()"
+        onchange="greeting()"
+        type="text"
+        id="greetingName"
+      />
+      <div id="greetingResult"></div>
+    </div>
+
+    <div class="container">
+      <label for="child1">Еnter the child's name</label>
+      <input />
+      <label for="age1">Еnter the child's age</label>
+      <input />
+      <label for="child2">Еnter the child's name</label>
+      <input />
+      <label for="age2">Еnter the child's age</label>
+      <input />
+      <p>
+        It is <span id="resultChild1"></span> and is
+        <span id="resultAge1"></span> years old
+      </p>
+      <p>
+        It is <span id="resultChild2"></span> and is
+        <span id="resultAge2"></span> years old
+      </p>
     </div>
   </body>
 </html>

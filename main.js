@@ -120,3 +120,47 @@ function MountChocolate() {
 
   output("resultMoneyLeft", "Money I still have " + resultMoneyLeft + " eur  ");
 }
+
+function greeting() {
+  var labels = {
+    en: "Enter your name",
+    cs: "Zadejte své jméno",
+    ua: "Введіть ваше ім'я",
+  };
+
+  var greetings = {
+    en: "Hello %user%!",
+    cs: "Ahoj %user%!",
+    ua: "Привіт %user%!",
+  };
+
+  let lang = document.getElementById("lang").value;
+
+  document.getElementById("greetingNameLabel").innerHTML = labels[lang];
+
+  let userName = document.getElementById("greetingName").value;
+  if (userName == "") {
+    document.getElementById("greetingResult").innerHTML = "";
+    return;
+  }
+  let template = greetings[lang];
+
+  let greetingResult = template.replaceAll("%user%", userName);
+
+  document.getElementById("greetingResult").innerHTML = greetingResult;
+}
+
+function kids() {
+  var label = 
+}
+const child1 = {
+  name:
+  age: 
+
+}
+
+const child2 = {
+  name:
+  age: 
+
+}
